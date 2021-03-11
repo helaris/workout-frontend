@@ -8,14 +8,14 @@ export class ExerciseService {
   private exercises: Exercise[] = [
     {
       id: '1',
-      title: 'Bench Press',
+      title: 'Chest Press',
       description:
-        'Lie face up on a barbell bench, then reach up and grip the bar with the hands directly in line with the shoulders and the elbows pointed towards the feet. Unrack the bar and bring it towards the chest by bending the elbows and keeping them close to the ribs. Push the feet into the floor, and press the hips into the bench as the bar is pushed away from the chest to return to the starting position.',
+        'Lie face up on a flat bench, and grip a barbell with the hands slightly wider than shoulder-width. Press the feet into the ground and the hips into the bench while lifting the bar off the rack. Slowly lower the bar to the chest by allowing the elbows to bend out to the side. Stop when the elbows are just below the bench, and press feet into the floor to press the weight straight up to return to the starting position.',
       category: ['chest', 'shoulders'],
       bodyPart: 'Arms, Chest,',
       equipment: 'Barbell',
       imageUrl:
-        'https://acewebcontent.azureedge.net/exercise-library/large/306-1.jpg',
+        'https://acewebcontent.azureedge.net/exercise-library/large/5-1.jpg',
     },
     {
       id: '2',
