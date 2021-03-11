@@ -14,6 +14,8 @@ export class ExerciseService {
       category: ['chest', 'shoulders'],
       bodyPart: 'Arms, Chest,',
       equipment: 'Barbell',
+      imageUrl:
+        'https://acewebcontent.azureedge.net/exercise-library/large/306-1.jpg',
     },
     {
       id: '2',
@@ -23,6 +25,8 @@ export class ExerciseService {
       category: ['legs', 'full-body'],
       bodyPart: 'Butt/Hips',
       equipment: 'Bench, Dumbbells',
+      imageUrl:
+        'https://acewebcontent.azureedge.net/exercise-library/large/52-1.jpg',
     },
   ];
   constructor() {}
@@ -31,7 +35,7 @@ export class ExerciseService {
     return [...this.exercises];
   }
 
-  getWorkout(workoutId: string) {
+  getExercise(workoutId: string) {
     return { ...this.exercises.find((workout) => workout.id === workoutId) };
   }
 }

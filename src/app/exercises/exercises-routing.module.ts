@@ -6,12 +6,15 @@ import { ExercisesPage } from './exercises.page';
 const routes: Routes = [
   {
     path: '',
-    component: ExercisesPage
+    component: ExercisesPage,
   },
   {
-    path: 'exercise-detail',
-    loadChildren: () => import('./exercise-detail/exercise-detail.module').then( m => m.ExerciseDetailPageModule)
-  }
+    path: ':exerciseId',
+    loadChildren: () =>
+      import('./exercise-detail/exercise-detail.module').then(
+        (m) => m.ExerciseDetailPageModule
+      ),
+  },
 ];
 
 @NgModule({

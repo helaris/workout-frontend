@@ -5,4 +5,5 @@ export interface Exercise {
   category: string[];
   bodyPart: string;
   equipment: string;
+  imageUrl: string;
 }
