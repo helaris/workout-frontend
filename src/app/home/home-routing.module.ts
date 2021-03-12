@@ -17,8 +17,10 @@ const routes: Routes = [
           },
           {
             path: ':workoutId',
-            loadChildren:
-              '../workouts/workout-detail/workout-detail.module#WorkoutDetailPageModule',
+            loadChildren: () =>
+              import('../workouts/workout-detail/workout-detail.module').then(
+                (m) => m.WorkoutDetailPageModule
+              ),
           },
         ],
       },
@@ -31,8 +33,10 @@ const routes: Routes = [
           },
           {
             path: ':exerciseId',
-            loadChildren:
-              '../exercises/exercise-detail/exercise-detail.module#ExerciseDetailPageModule',
+            loadChildren: () =>
+              import(
+                '../exercises/exercise-detail/exercise-detail.module'
+              ).then((m) => m.ExerciseDetailPageModule),
           },
         ],
       },

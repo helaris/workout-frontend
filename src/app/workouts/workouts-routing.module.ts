@@ -8,13 +8,13 @@ const routes: Routes = [
     path: '',
     component: WorkoutsPage,
   },
-  {
-    path: ':workoutId',
-    loadChildren: () =>
-      import('./workout-detail/workout-detail.module').then(
-        (m) => m.WorkoutDetailPageModule
-      ),
-  },
+  // {
+  //   path: ':workoutId',
+  //   loadChildren: () =>
+  //     import('./workout-detail/workout-detail.module').then(
+  //       (m) => m.WorkoutDetailPageModule
+  //     ),
+  // },
 ];
 
 @NgModule({
