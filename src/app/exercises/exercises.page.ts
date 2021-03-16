@@ -12,7 +12,11 @@ export class ExercisesPage implements OnInit {
 
   constructor(private exerciseService: ExerciseService) {}
 
-  ngOnInit() {
-    this.exercises = this.exerciseService.getAllExercises();
+  ngOnInit() {}
+
+  ionViewWillEnter() {
+    this.exerciseService.fetchExercises().subscribe((exercise) => {
+      this.exercises = exercise;
+    });
   }
 }

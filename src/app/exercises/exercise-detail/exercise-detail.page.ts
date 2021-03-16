@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./exercise-detail.page.scss'],
 })
 export class ExerciseDetailPage implements OnInit {
-  loadedExercise: Exercise;
+  exercise;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -20,7 +20,14 @@ export class ExerciseDetailPage implements OnInit {
     this.activatedRoute.paramMap.subscribe((paramMap) => {
       if (!paramMap.has('exerciseId')) return;
       const exerciseId = paramMap.get('exerciseId');
-      this.loadedExercise = this.exerciseService.getExercise(exerciseId);
+      this.exerciseService.getExercise(exerciseId).subscribe((e) => {
+        this.exercise = e;
+      });
     });
   }
+
+  // ionViewWillEnter() {
+  //   this.exerciseService.fetchExercises().subscribe((exercise) => {
+  //     this.exercises = exercise;
+  //   });
 }

@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/exercises"></ion-back-button>
+      <ion-back-button defaultHref="home/tabs/exercises"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{loadedExercise.title}}</ion-title>
+    <ion-title>{{exercise?.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,12 +11,12 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-img [src]="loadedExercise.imageUrl"></ion-img>
+        <ion-img [src]="exercise?.images[0]"></ion-img>
       </ion-col>
       <ion-row>
-        <ion-col>
-          <h2>Description:</h2>
-          {{loadedExercise.description}}
+        <ion-col *ngFor="let desc of exercise?.description">
+          <h1>{{desc?.title}}</h1>
+          <p>{{desc?.description}}</p>
         </ion-col>
       </ion-row>
     </ion-row>

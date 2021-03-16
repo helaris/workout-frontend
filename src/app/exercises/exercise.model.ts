@@ -1,9 +1,9 @@
 export interface Exercise {
-  id: string;
-  title: string;
-  description: string;
-  category: string[];
   bodyPart: string;
+  category: string[];
+  description: any;
   equipment: string;
-  imageUrl: string;
+  imageUrl: string[];
+  title: string;
+  _id: string;
 }
