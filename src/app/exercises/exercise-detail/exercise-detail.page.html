@@ -11,12 +11,13 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-img [src]="exercise?.images[0]"></ion-img>
+        <ion-img *ngFor="let img of exercise?.images" [src]="img"></ion-img>
       </ion-col>
-      <ion-row>
-        <ion-col *ngFor="let desc of exercise?.description">
+      <ion-row *ngFor="let desc of exercise?.description">
+        <ion-col>
           <h1>{{desc?.title}}</h1>
           <p>{{desc?.description}}</p>
+          <span>{{desc?.exerciseTip}}</span>
         </ion-col>
       </ion-row>
     </ion-row>
